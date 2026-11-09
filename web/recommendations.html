@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem("buswatch.theme") || "dark"; } catch { document.documentElement.dataset.theme = "dark"; }</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BusWatch - Smart Recommendations</title>
+  <meta name="description" content="BusWatch: campus bus demand analytics (simulated data).">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='6' width='26' height='17' rx='4' fill='none' stroke='%23465fff' stroke-width='2.5'/%3E%3Ccircle cx='10' cy='26' r='2.5' fill='%23465fff'/%3E%3Ccircle cx='22' cy='26' r='2.5' fill='%23465fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8" defer></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8" defer></script>
+</head>
+<body>
+  <header id="topbar" class="topbar"></header>
+  <main id="content">
+    <div class="page-head"><h1>Smart Recommendations</h1><p>Where students miss a full bus most, and the fixes that help, each tested in the simulator with its cost.</p></div>
+    <div id="filters"></div>
+    <section id="recs"></section>
+    <section class="card">
+      <h2>Management report</h2>
+      <p class="muted">A one-page report for transport admins, built from the numbers above. Choose "Save as PDF" in the print dialog.</p>
+      <div class="btn-row"><button class="btn primary" id="report-btn" type="button">Save report as PDF</button></div>
+      <article class="report" id="report" hidden></article>
+    </section>
+  </main>
+  <footer>BusWatch prototype - All figures are <b>simulated data</b>, not real university records.</footer>
+  <script type="module" src="js/recommendations-page.js"></script>
+</body>
+</html>

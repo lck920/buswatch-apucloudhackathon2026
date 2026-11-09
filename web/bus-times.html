@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem("buswatch.theme") || "dark"; } catch { document.documentElement.dataset.theme = "dark"; }</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BusWatch - Timetable</title>
+  <meta name="description" content="BusWatch: campus bus demand analytics (simulated data).">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='6' width='26' height='17' rx='4' fill='none' stroke='%23465fff' stroke-width='2.5'/%3E%3Ccircle cx='10' cy='26' r='2.5' fill='%23465fff'/%3E%3Ccircle cx='22' cy='26' r='2.5' fill='%23465fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="topbar" class="topbar"></header>
+  <main id="content">
+    <div class="page-head"><h1>Timetable</h1><p>The shuttle timetable, with how crowded each bus usually is when it reaches your stop.</p></div>
+    <section class="card">
+      <div class="tabs" id="bt-tabs" role="tablist" aria-label="Service day"></div>
+      <div class="filter-row" id="bt-controls"></div>
+    </section>
+    <p class="notice small">Simulated timetable. Crowd dots come from the simulated queues on normal (non-exam) weeks.</p>
+    <div id="bt-results"></div>
+  </main>
+  <footer>BusWatch prototype - All figures are <b>simulated data</b>, not real university records.</footer>
+  <script type="module" src="js/bus-times.js"></script>
+</body>
+</html>

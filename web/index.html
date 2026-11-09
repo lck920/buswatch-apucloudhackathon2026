@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem("buswatch.theme") || "dark"; } catch { document.documentElement.dataset.theme = "dark"; }</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BusWatch - Home</title>
+  <meta name="description" content="BusWatch: campus bus demand analytics (simulated data).">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='6' width='26' height='17' rx='4' fill='none' stroke='%23465fff' stroke-width='2.5'/%3E%3Ccircle cx='10' cy='26' r='2.5' fill='%23465fff'/%3E%3Ccircle cx='22' cy='26' r='2.5' fill='%23465fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <header id="topbar" class="topbar"></header>
+  <main id="content">
+    <section class="hero">
+      <h1>Fewer pushed queues, smarter buses.</h1>
+      <p class="lead">Students push and cut the queue at campus bus stops because buses overflow at class changes and run half-empty in between. BusWatch predicts where crowds form from the class timetable and shows how to move buses to meet them.</p>
+    </section>
+    <div id="filters"></div>
+    <section>
+      <h2>How it works</h2>
+      <div class="grid cols-3 steps" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))">
+        <div class="card step"><h3>Timetable</h3><p class="muted">Students board at LRT and the residences before class starts, then queue at APU when it ends at hh:50.</p></div>
+        <div class="card step"><h3>Predict</h3><p class="muted">A machine-learning model forecasts the queue at every stop for every half-hour departure.</p></div>
+        <div class="card step"><h3>Find gaps</h3><p class="muted">Compare predicted queues with seats offered to see where buses overflow.</p></div>
+        <div class="card step"><h3>Simulate &amp; recommend</h3><p class="muted">Test schedule changes and get plain-language fixes with their expected impact.</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>Headline numbers</h2>
+      <div class="grid kpis" id="headline"></div>
+    </section>
+    <section>
+      <h2>Explore</h2>
+      <div class="grid cols-3" id="links"></div>
+    </section>
+  </main>
+  <footer>BusWatch prototype - All figures are <b>simulated data</b>, not real university records.</footer>
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+service_day,route,trip,stop,stop_order,arrival_time,capacity,free_seats_at_stop
+Mon - Fri,APU ↔ LRT - Bukit Jalil,1,LRT - Bukit Jalil,1,07:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,1,APU,2,07:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,2,LRT - Bukit Jalil,1,07:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,2,APU,2,07:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,3,LRT - Bukit Jalil,1,08:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,3,APU,2,08:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,4,LRT - Bukit Jalil,1,08:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,4,APU,2,08:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,5,LRT - Bukit Jalil,1,09:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,5,APU,2,09:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,6,LRT - Bukit Jalil,1,09:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,6,APU,2,09:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,7,LRT - Bukit Jalil,1,10:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,7,APU,2,10:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,8,LRT - Bukit Jalil,1,10:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,8,APU,2,10:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,9,LRT - Bukit Jalil,1,11:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,9,APU,2,11:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,10,LRT - Bukit Jalil,1,11:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,10,APU,2,11:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,11,LRT - Bukit Jalil,1,12:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,11,APU,2,12:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,12,LRT - Bukit Jalil,1,12:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,12,APU,2,12:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,13,LRT - Bukit Jalil,1,13:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,13,APU,2,13:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,14,LRT - Bukit Jalil,1,13:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,14,APU,2,13:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,15,LRT - Bukit Jalil,1,14:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,15,APU,2,14:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,16,LRT - Bukit Jalil,1,14:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,16,APU,2,14:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,17,LRT - Bukit Jalil,1,15:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,17,APU,2,15:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,18,LRT - Bukit Jalil,1,15:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,18,APU,2,15:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,19,LRT - Bukit Jalil,1,16:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,19,APU,2,16:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,20,LRT - Bukit Jalil,1,16:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,20,APU,2,16:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,21,LRT - Bukit Jalil,1,17:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,21,APU,2,17:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,22,LRT - Bukit Jalil,1,18:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,22,APU,2,18:00,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,23,LRT - Bukit Jalil,1,18:30,40,40
+Mon - Fri,APU ↔ LRT - Bukit Jalil,23,APU,2,18:30,40,40
+Mon - Fri,APU ↔ M Vertica,1,M Vertica,1,07:00,40,40
+Mon - Fri,APU ↔ M Vertica,1,APU,2,07:00,40,40
+Mon - Fri,APU ↔ M Vertica,2,M Vertica,1,07:30,40,40
+Mon - Fri,APU ↔ M Vertica,2,APU,2,07:30,40,40
+Mon - Fri,APU ↔ M Vertica,3,M Vertica,1,08:00,40,40
+Mon - Fri,APU ↔ M Vertica,3,APU,2,08:00,40,40
+Mon - Fri,APU ↔ M Vertica,4,M Vertica,1,08:30,40,40
+Mon - Fri,APU ↔ M Vertica,4,APU,2,08:30,40,40
+Mon - Fri,APU ↔ M Vertica,5,M Vertica,1,09:00,40,40
+Mon - Fri,APU ↔ M Vertica,5,APU,2,09:00,40,40
+Mon - Fri,APU ↔ M Vertica,6,M Vertica,1,09:30,40,40
+Mon - Fri,APU ↔ M Vertica,6,APU,2,09:30,40,40
+Mon - Fri,APU ↔ M Vertica,7,M Vertica,1,10:00,40,40
+Mon - Fri,APU ↔ M Vertica,7,APU,2,10:00,40,40
+Mon - Fri,APU ↔ M Vertica,8,M Vertica,1,10:30,40,40
+Mon - Fri,APU ↔ M Vertica,8,APU,2,10:30,40,40
+Mon - Fri,APU ↔ M Vertica,9,M Vertica,1,11:00,40,40
+Mon - Fri,APU ↔ M Vertica,9,APU,2,11:00,40,40
+Mon - Fri,APU ↔ M Vertica,10,M Vertica,1,11:30,40,40
+Mon - Fri,APU ↔ M Vertica,10,APU,2,11:30,40,40
+Mon - Fri,APU ↔ M Vertica,11,M Vertica,1,12:00,40,40
+Mon - Fri,APU ↔ M Vertica,11,APU,2,12:00,40,40
+Mon - Fri,APU ↔ M Vertica,12,M Vertica,1,13:00,40,40
+Mon - Fri,APU ↔ M Vertica,12,APU,2,13:00,40,40
+Mon - Fri,APU ↔ M Vertica,13,M Vertica,1,13:30,40,40
+Mon - Fri,APU ↔ M Vertica,13,APU,2,13:30,40,40
+Mon - Fri,APU ↔ M Vertica,14,M Vertica,1,14:00,40,40
+Mon - Fri,APU ↔ M Vertica,14,APU,2,14:00,40,40
+Mon - Fri,APU ↔ M Vertica,15,M Vertica,1,14:30,40,40
+Mon - Fri,APU ↔ M Vertica,15,APU,2,14:30,40,40
+Mon - Fri,APU ↔ M Vertica,16,M Vertica,1,15:00,40,40
+Mon - Fri,APU ↔ M Vertica,16,APU,2,15:00,40,40
+Mon - Fri,APU ↔ M Vertica,17,M Vertica,1,15:30,40,40
+Mon - Fri,APU ↔ M Vertica,17,APU,2,15:30,40,40
+Mon - Fri,APU ↔ M Vertica,18,M Vertica,1,16:00,40,40
+Mon - Fri,APU ↔ M Vertica,18,APU,2,16:00,40,40
+Mon - Fri,APU ↔ M Vertica,19,M Vertica,1,16:30,40,40
+Mon - Fri,APU ↔ M Vertica,19,APU,2,16:30,40,40
+Mon - Fri,APU ↔ M Vertica,20,M Vertica,1,17:00,40,40
+Mon - Fri,APU ↔ M Vertica,20,APU,2,17:00,40,40
+Mon - Fri,APU ↔ M Vertica,21,M Vertica,1,17:30,40,40
+Mon - Fri,APU ↔ M Vertica,21,APU,2,17:30,40,40
+Mon - Fri,APU ↔ M Vertica,22,M Vertica,1,18:00,40,40
+Mon - Fri,APU ↔ M Vertica,22,APU,2,18:00,40,40
+Mon - Fri,APU ↔ M Vertica,23,M Vertica,1,18:30,40,40
+Mon - Fri,APU ↔ M Vertica,23,APU,2,18:30,40,40
+Mon - Fri,APU ↔ Parkhill,1,Parkhill,1,07:00,40,40
+Mon - Fri,APU ↔ Parkhill,1,APU,2,07:00,40,40
+Mon - Fri,APU ↔ Parkhill,2,Parkhill,1,07:30,40,40
+Mon - Fri,APU ↔ Parkhill,2,APU,2,07:30,40,40
+Mon - Fri,APU ↔ Parkhill,3,Parkhill,1,08:00,40,40
+Mon - Fri,APU ↔ Parkhill,3,APU,2,08:00,40,40
+Mon - Fri,APU ↔ Parkhill,4,Parkhill,1,08:30,40,40
+Mon - Fri,APU ↔ Parkhill,4,APU,2,08:30,40,40
+Mon - Fri,APU ↔ Parkhill,5,Parkhill,1,09:00,40,40
+Mon - Fri,APU ↔ Parkhill,5,APU,2,09:00,40,40
+Mon - Fri,APU ↔ Parkhill,6,Parkhill,1,09:30,40,40
+Mon - Fri,APU ↔ Parkhill,6,APU,2,09:30,40,40
+Mon - Fri,APU ↔ Parkhill,7,Parkhill,1,10:00,40,40
+Mon - Fri,APU ↔ Parkhill,7,APU,2,10:00,40,40
+Mon - Fri,APU ↔ Parkhill,8,Parkhill,1,10:30,40,40
+Mon - Fri,APU ↔ Parkhill,8,APU,2,10:30,40,40
+Mon - Fri,APU ↔ Parkhill,9,Parkhill,1,11:00,40,40
+Mon - Fri,APU ↔ Parkhill,9,APU,2,11:00,40,40
+Mon - Fri,APU ↔ Parkhill,10,Parkhill,1,11:30,40,40
+Mon - Fri,APU ↔ Parkhill,10,APU,2,11:30,40,40
+Mon - Fri,APU ↔ Parkhill,11,Parkhill,1,12:00,40,40
+Mon - Fri,APU ↔ Parkhill,11,APU,2,12:00,40,40
+Mon - Fri,APU ↔ Parkhill,12,Parkhill,1,13:00,40,40
+Mon - Fri,APU ↔ Parkhill,12,APU,2,13:00,40,40
+Mon - Fri,APU ↔ Parkhill,13,Parkhill,1,13:30,40,40
+Mon - Fri,APU ↔ Parkhill,13,APU,2,13:30,40,40
+Mon - Fri,APU ↔ Parkhill,14,Parkhill,1,14:00,40,40
+Mon - Fri,APU ↔ Parkhill,14,APU,2,14:00,40,40
+Mon - Fri,APU ↔ Parkhill,15,Parkhill,1,14:30,40,40
+Mon - Fri,APU ↔ Parkhill,15,APU,2,14:30,40,40
+Mon - Fri,APU ↔ Parkhill,16,Parkhill,1,15:00,40,40
+Mon - Fri,APU ↔ Parkhill,16,APU,2,15:00,40,40
+Mon - Fri,APU ↔ Parkhill,17,Parkhill,1,15:30,40,40
+Mon - Fri,APU ↔ Parkhill,17,APU,2,15:30,40,40
+Mon - Fri,APU ↔ Parkhill,18,Parkhill,1,16:00,40,40
+Mon - Fri,APU ↔ Parkhill,18,APU,2,16:00,40,40
+Mon - Fri,APU ↔ Parkhill,19,Parkhill,1,16:30,40,40
+Mon - Fri,APU ↔ Parkhill,19,APU,2,16:30,40,40
+Mon - Fri,APU ↔ Parkhill,20,Parkhill,1,17:00,40,40
+Mon - Fri,APU ↔ Parkhill,20,APU,2,17:00,40,40
+Mon - Fri,APU ↔ Parkhill,21,Parkhill,1,17:30,40,40
+Mon - Fri,APU ↔ Parkhill,21,APU,2,17:30,40,40
+Mon - Fri,APU ↔ Parkhill,22,Parkhill,1,18:00,40,40
+Mon - Fri,APU ↔ Parkhill,22,APU,2,18:00,40,40
+Mon - Fri,APU ↔ Parkhill,23,Parkhill,1,18:30,40,40
+Mon - Fri,APU ↔ Parkhill,23,APU,2,18:30,40,40
+Mon - Fri,APU ↔ Mosque,1,Mosque,1,07:00,40,40
+Mon - Fri,APU ↔ Mosque,1,APU,2,07:00,40,40
+Mon - Fri,APU ↔ Mosque,2,Mosque,1,07:30,40,40
+Mon - Fri,APU ↔ Mosque,2,APU,2,07:30,40,40
+Mon - Fri,APU ↔ Mosque,3,Mosque,1,08:00,40,40
+Mon - Fri,APU ↔ Mosque,3,APU,2,08:00,40,40
+Mon - Fri,APU ↔ Mosque,4,Mosque,1,08:30,40,40
+Mon - Fri,APU ↔ Mosque,4,APU,2,08:30,40,40
+Mon - Fri,APU ↔ Mosque,5,Mosque,1,09:00,40,40
+Mon - Fri,APU ↔ Mosque,5,APU,2,09:00,40,40
+Mon - Fri,APU ↔ Mosque,6,Mosque,1,09:30,40,40
+Mon - Fri,APU ↔ Mosque,6,APU,2,09:30,40,40
+Mon - Fri,APU ↔ Mosque,7,Mosque,1,10:00,40,40
+Mon - Fri,APU ↔ Mosque,7,APU,2,10:00,40,40
+Mon - Fri,APU ↔ Mosque,8,Mosque,1,10:30,40,40
+Mon - Fri,APU ↔ Mosque,8,APU,2,10:30,40,40
+Mon - Fri,APU ↔ Mosque,9,Mosque,1,11:00,40,40
+Mon - Fri,APU ↔ Mosque,9,APU,2,11:00,40,40
+Mon - Fri,APU ↔ Mosque,10,Mosque,1,11:30,40,40
+Mon - Fri,APU ↔ Mosque,10,APU,2,11:30,40,40
+Mon - Fri,APU ↔ Mosque,11,Mosque,1,12:00,40,40
+Mon - Fri,APU ↔ Mosque,11,APU,2,12:00,40,40
+Mon - Fri,APU ↔ Mosque,12,Mosque,1,12:30,40,40
+Mon - Fri,APU ↔ Mosque,12,APU,2,12:30,40,40
+Mon - Fri,APU ↔ Mosque,13,Mosque,1,13:00,40,40
+Mon - Fri,APU ↔ Mosque,13,APU,2,13:00,40,40
+Mon - Fri,APU ↔ Mosque,14,Mosque,1,13:30,40,40
+Mon - Fri,APU ↔ Mosque,14,APU,2,13:30,40,40
+Mon - Fri,APU ↔ Mosque,15,Mosque,1,14:00,40,40
+Mon - Fri,APU ↔ Mosque,15,APU,2,14:00,40,40
+Mon - Fri,APU ↔ Mosque,16,Mosque,1,14:30,40,40
+Mon - Fri,APU ↔ Mosque,16,APU,2,14:30,40,40
+Mon - Fri,APU ↔ Mosque,17,Mosque,1,15:00,40,40
+Mon - Fri,APU ↔ Mosque,17,APU,2,15:00,40,40
+Mon - Fri,APU ↔ Mosque,18,Mosque,1,15:30,40,40
+Mon - Fri,APU ↔ Mosque,18,APU,2,15:30,40,40
+Mon - Fri,APU ↔ Mosque,19,Mosque,1,16:00,40,40
+Mon - Fri,APU ↔ Mosque,19,APU,2,16:00,40,40
+Mon - Fri,APU ↔ Mosque,20,Mosque,1,16:30,40,40
+Mon - Fri,APU ↔ Mosque,20,APU,2,16:30,40,40
+Mon - Fri,APU ↔ Mosque,21,Mosque,1,17:00,40,40
+Mon - Fri,APU ↔ Mosque,21,APU,2,17:00,40,40
+Mon - Fri,APU ↔ Mosque,22,Mosque,1,17:30,40,40
+Mon - Fri,APU ↔ Mosque,22,APU,2,17:30,40,40
+Mon - Fri,APU ↔ Mosque,23,Mosque,1,18:00,40,40
+Mon - Fri,APU ↔ Mosque,23,APU,2,18:00,40,40
+Mon - Fri,APU ↔ Mosque,24,Mosque,1,18:30,40,40
+Mon - Fri,APU ↔ Mosque,24,APU,2,18:30,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,1,LRT - Bukit Jalil,1,07:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,1,APU,2,07:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,2,LRT - Bukit Jalil,1,08:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,2,APU,2,08:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,3,LRT - Bukit Jalil,1,09:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,3,APU,2,09:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,4,LRT - Bukit Jalil,1,10:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,4,APU,2,10:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,5,LRT - Bukit Jalil,1,11:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,5,APU,2,11:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,6,LRT - Bukit Jalil,1,12:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,6,APU,2,12:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,7,LRT - Bukit Jalil,1,13:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,7,APU,2,13:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,8,LRT - Bukit Jalil,1,14:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,8,APU,2,14:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,9,LRT - Bukit Jalil,1,15:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,9,APU,2,15:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,10,LRT - Bukit Jalil,1,16:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,10,APU,2,16:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,11,LRT - Bukit Jalil,1,17:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,11,APU,2,17:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,12,LRT - Bukit Jalil,1,18:00,40,40
+Saturday,APU ↔ LRT - Bukit Jalil,12,APU,2,18:00,40,40
+Saturday,APU ↔ M Vertica,1,M Vertica,1,07:00,40,40
+Saturday,APU ↔ M Vertica,1,APU,2,07:00,40,40
+Saturday,APU ↔ M Vertica,2,M Vertica,1,08:00,40,40
+Saturday,APU ↔ M Vertica,2,APU,2,08:00,40,40
+Saturday,APU ↔ M Vertica,3,M Vertica,1,09:00,40,40
+Saturday,APU ↔ M Vertica,3,APU,2,09:00,40,40
+Saturday,APU ↔ M Vertica,4,M Vertica,1,10:00,40,40
+Saturday,APU ↔ M Vertica,4,APU,2,10:00,40,40
+Saturday,APU ↔ M Vertica,5,M Vertica,1,11:00,40,40
+Saturday,APU ↔ M Vertica,5,APU,2,11:00,40,40
+Saturday,APU ↔ M Vertica,6,M Vertica,1,12:00,40,40
+Saturday,APU ↔ M Vertica,6,APU,2,12:00,40,40
+Saturday,APU ↔ M Vertica,7,M Vertica,1,13:00,40,40
+Saturday,APU ↔ M Vertica,7,APU,2,13:00,40,40
+Saturday,APU ↔ M Vertica,8,M Vertica,1,14:00,40,40
+Saturday,APU ↔ M Vertica,8,APU,2,14:00,40,40
+Saturday,APU ↔ M Vertica,9,M Vertica,1,15:00,40,40
+Saturday,APU ↔ M Vertica,9,APU,2,15:00,40,40
+Saturday,APU ↔ M Vertica,10,M Vertica,1,16:00,40,40
+Saturday,APU ↔ M Vertica,10,APU,2,16:00,40,40
+Saturday,APU ↔ M Vertica,11,M Vertica,1,17:00,40,40
+Saturday,APU ↔ M Vertica,11,APU,2,17:00,40,40
+Saturday,APU ↔ M Vertica,12,M Vertica,1,18:00,40,40
+Saturday,APU ↔ M Vertica,12,APU,2,18:00,40,40
+Saturday,APU ↔ Parkhill,1,Parkhill,1,07:00,40,40
+Saturday,APU ↔ Parkhill,1,APU,2,07:00,40,40
+Saturday,APU ↔ Parkhill,2,Parkhill,1,08:00,40,40
+Saturday,APU ↔ Parkhill,2,APU,2,08:00,40,40
+Saturday,APU ↔ Parkhill,3,Parkhill,1,09:00,40,40
+Saturday,APU ↔ Parkhill,3,APU,2,09:00,40,40
+Saturday,APU ↔ Parkhill,4,Parkhill,1,10:00,40,40
+Saturday,APU ↔ Parkhill,4,APU,2,10:00,40,40
+Saturday,APU ↔ Parkhill,5,Parkhill,1,11:00,40,40
+Saturday,APU ↔ Parkhill,5,APU,2,11:00,40,40
+Saturday,APU ↔ Parkhill,6,Parkhill,1,12:00,40,40
+Saturday,APU ↔ Parkhill,6,APU,2,12:00,40,40
+Saturday,APU ↔ Parkhill,7,Parkhill,1,13:00,40,40
+Saturday,APU ↔ Parkhill,7,APU,2,13:00,40,40
+Saturday,APU ↔ Parkhill,8,Parkhill,1,14:00,40,40
+Saturday,APU ↔ Parkhill,8,APU,2,14:00,40,40
+Saturday,APU ↔ Parkhill,9,Parkhill,1,15:00,40,40
+Saturday,APU ↔ Parkhill,9,APU,2,15:00,40,40
+Saturday,APU ↔ Parkhill,10,Parkhill,1,16:00,40,40
+Saturday,APU ↔ Parkhill,10,APU,2,16:00,40,40
+Saturday,APU ↔ Parkhill,11,Parkhill,1,17:00,40,40
+Saturday,APU ↔ Parkhill,11,APU,2,17:00,40,40
+Saturday,APU ↔ Parkhill,12,Parkhill,1,18:00,40,40
+Saturday,APU ↔ Parkhill,12,APU,2,18:00,40,40
+Saturday,APU ↔ Mosque,1,Mosque,1,07:00,40,40
+Saturday,APU ↔ Mosque,1,APU,2,07:00,40,40
+Saturday,APU ↔ Mosque,2,Mosque,1,08:00,40,40
+Saturday,APU ↔ Mosque,2,APU,2,08:00,40,40
+Saturday,APU ↔ Mosque,3,Mosque,1,09:00,40,40
+Saturday,APU ↔ Mosque,3,APU,2,09:00,40,40
+Saturday,APU ↔ Mosque,4,Mosque,1,10:00,40,40
+Saturday,APU ↔ Mosque,4,APU,2,10:00,40,40
+Saturday,APU ↔ Mosque,5,Mosque,1,11:00,40,40
+Saturday,APU ↔ Mosque,5,APU,2,11:00,40,40
+Saturday,APU ↔ Mosque,6,Mosque,1,12:00,40,40
+Saturday,APU ↔ Mosque,6,APU,2,12:00,40,40
+Saturday,APU ↔ Mosque,7,Mosque,1,13:00,40,40
+Saturday,APU ↔ Mosque,7,APU,2,13:00,40,40
+Saturday,APU ↔ Mosque,8,Mosque,1,14:00,40,40
+Saturday,APU ↔ Mosque,8,APU,2,14:00,40,40
+Saturday,APU ↔ Mosque,9,Mosque,1,15:00,40,40
+Saturday,APU ↔ Mosque,9,APU,2,15:00,40,40
+Saturday,APU ↔ Mosque,10,Mosque,1,16:00,40,40
+Saturday,APU ↔ Mosque,10,APU,2,16:00,40,40
+Saturday,APU ↔ Mosque,11,Mosque,1,17:00,40,40
+Saturday,APU ↔ Mosque,11,APU,2,17:00,40,40
+Saturday,APU ↔ Mosque,12,Mosque,1,18:00,40,40
+Saturday,APU ↔ Mosque,12,APU,2,18:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,1,LRT - Bukit Jalil,1,07:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,1,APU,2,07:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,2,LRT - Bukit Jalil,1,08:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,2,APU,2,08:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,3,LRT - Bukit Jalil,1,09:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,3,APU,2,09:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,4,LRT - Bukit Jalil,1,10:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,4,APU,2,10:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,5,LRT - Bukit Jalil,1,11:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,5,APU,2,11:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,6,LRT - Bukit Jalil,1,12:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,6,APU,2,12:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,7,LRT - Bukit Jalil,1,13:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,7,APU,2,13:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,8,LRT - Bukit Jalil,1,14:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,8,APU,2,14:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,9,LRT - Bukit Jalil,1,15:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,9,APU,2,15:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,10,LRT - Bukit Jalil,1,16:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,10,APU,2,16:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,11,LRT - Bukit Jalil,1,17:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,11,APU,2,17:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,12,LRT - Bukit Jalil,1,18:00,40,40
+Sunday,APU ↔ LRT - Bukit Jalil,12,APU,2,18:00,40,40
+Sunday,APU ↔ M Vertica,1,M Vertica,1,07:00,40,40
+Sunday,APU ↔ M Vertica,1,APU,2,07:00,40,40
+Sunday,APU ↔ M Vertica,2,M Vertica,1,08:00,40,40
+Sunday,APU ↔ M Vertica,2,APU,2,08:00,40,40
+Sunday,APU ↔ M Vertica,3,M Vertica,1,09:00,40,40
+Sunday,APU ↔ M Vertica,3,APU,2,09:00,40,40
+Sunday,APU ↔ M Vertica,4,M Vertica,1,10:00,40,40
+Sunday,APU ↔ M Vertica,4,APU,2,10:00,40,40
+Sunday,APU ↔ M Vertica,5,M Vertica,1,11:00,40,40
+Sunday,APU ↔ M Vertica,5,APU,2,11:00,40,40
+Sunday,APU ↔ M Vertica,6,M Vertica,1,12:00,40,40
+Sunday,APU ↔ M Vertica,6,APU,2,12:00,40,40
+Sunday,APU ↔ M Vertica,7,M Vertica,1,13:00,40,40
+Sunday,APU ↔ M Vertica,7,APU,2,13:00,40,40
+Sunday,APU ↔ M Vertica,8,M Vertica,1,14:00,40,40
+Sunday,APU ↔ M Vertica,8,APU,2,14:00,40,40
+Sunday,APU ↔ M Vertica,9,M Vertica,1,15:00,40,40
+Sunday,APU ↔ M Vertica,9,APU,2,15:00,40,40
+Sunday,APU ↔ M Vertica,10,M Vertica,1,16:00,40,40
+Sunday,APU ↔ M Vertica,10,APU,2,16:00,40,40
+Sunday,APU ↔ M Vertica,11,M Vertica,1,17:00,40,40
+Sunday,APU ↔ M Vertica,11,APU,2,17:00,40,40
+Sunday,APU ↔ M Vertica,12,M Vertica,1,18:00,40,40
+Sunday,APU ↔ M Vertica,12,APU,2,18:00,40,40
+Sunday,APU ↔ Parkhill,1,Parkhill,1,07:00,40,40
+Sunday,APU ↔ Parkhill,1,APU,2,07:00,40,40
+Sunday,APU ↔ Parkhill,2,Parkhill,1,08:00,40,40
+Sunday,APU ↔ Parkhill,2,APU,2,08:00,40,40
+Sunday,APU ↔ Parkhill,3,Parkhill,1,09:00,40,40
+Sunday,APU ↔ Parkhill,3,APU,2,09:00,40,40
+Sunday,APU ↔ Parkhill,4,Parkhill,1,10:00,40,40
+Sunday,APU ↔ Parkhill,4,APU,2,10:00,40,40
+Sunday,APU ↔ Parkhill,5,Parkhill,1,11:00,40,40
+Sunday,APU ↔ Parkhill,5,APU,2,11:00,40,40
+Sunday,APU ↔ Parkhill,6,Parkhill,1,12:00,40,40
+Sunday,APU ↔ Parkhill,6,APU,2,12:00,40,40
+Sunday,APU ↔ Parkhill,7,Parkhill,1,13:00,40,40
+Sunday,APU ↔ Parkhill,7,APU,2,13:00,40,40
+Sunday,APU ↔ Parkhill,8,Parkhill,1,14:00,40,40
+Sunday,APU ↔ Parkhill,8,APU,2,14:00,40,40
+Sunday,APU ↔ Parkhill,9,Parkhill,1,15:00,40,40
+Sunday,APU ↔ Parkhill,9,APU,2,15:00,40,40
+Sunday,APU ↔ Parkhill,10,Parkhill,1,16:00,40,40
+Sunday,APU ↔ Parkhill,10,APU,2,16:00,40,40
+Sunday,APU ↔ Parkhill,11,Parkhill,1,17:00,40,40
+Sunday,APU ↔ Parkhill,11,APU,2,17:00,40,40
+Sunday,APU ↔ Parkhill,12,Parkhill,1,18:00,40,40
+Sunday,APU ↔ Parkhill,12,APU,2,18:00,40,40
