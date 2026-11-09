@@ -2,6 +2,14 @@
 
 **Stop the push at the bus stop: predict when APU shuttles will overflow, and put the buses where the students are.**
 
+### 🔗 Live demo: **[buswatch-seven.vercel.app](https://buswatch-seven.vercel.app/)**
+
+**Theme: Data-Driven Research & Intelligent Decision Making.** BusWatch turns the data APU already owns (semester intake,
+class timetable, shuttle timetable) into a forecast of how many students will wait at each stop, and into ranked, costed
+decisions on where to put the buses. See [3. The data behind BusWatch](#3-the-data-behind-buswatch).
+
+![BusWatch Smart Recommendations](docs/smart-recommendations.png)
+
 > ⚠️ Every number in the prototype is **simulated**. We have no access to university data, so BusWatch generates
 > 8 weeks of realistic demand for a 10,000-student campus.
 
@@ -12,7 +20,7 @@ line, because a fix aimed at the wrong cause changes nothing. Put up more signs 
 cut the line if the bus can't fit everyone.
 
 So we spent most of our time on the problem, not the code: riding the shuttles ourselves, going through the
-@apucutlineking posts, and comparing the shuttle timetable with when classes actually end. That is how we found the
+[@apucutlineking](https://www.instagram.com/apucutlineking/) posts, and comparing the shuttle timetable with when classes actually end. That is how we found the
 real cause. Line cutting is a **symptom**. The **cause** is buses that arrive at a steady pace while students arrive in
 waves. BusWatch exists to fix that cause. The prototype is the proof that it can be done, not the point of the project.
 
@@ -43,18 +51,59 @@ and in exam week. When more students arrive than the bus has seats, cutting the 
 
 - **We live it.** Several of us ride the shuttles every day, to LRT Bukit Jalil and to the residences, so we started from our
   own experience of missing buses and watching the line get cut.
-- **Public evidence.** We studied @apucutlineking: how often posts appear, which stops and which times. 
+- **Public evidence.** We studied [@apucutlineking](https://www.instagram.com/apucutlineking/): how often posts appear, which stops and which times. 
 - **Timetable review.** We compared the APSpace shuttle timetable (Mon–Fri / Saturday / Sunday tabs, a bus every 30 minutes)
   with when classes end and start.
-- **What the posts show.** The posts on @apucutlineking are filmed by students standing in the shuttle queue: other students
+- **What the posts show.** The posts on [@apucutlineking](https://www.instagram.com/apucutlineking/) are filmed by students standing in the shuttle queue: other students
   walking past the line and getting on first while the bus fills up. They show this is not a one-off. It happens
   repeatedly, at the moments when more students are waiting than the bus can carry.
 - **From symptoms to cause.** We listed what students complain about (cutting, waiting, full buses, empty buses) and asked
   "why" until we reached one cause we can actually fix: supply doesn't match demand at peak times.
 
-## 3. Our solution: BusWatch
+## 3. The data behind BusWatch
 
-**BusWatch is built to help APU's transport operations team run the shuttles better**: put buses where the students
+BusWatch is built on data. Most of it **APU already has**; the rest is cheap to collect.
+
+### What data we use
+
+| Data | Real source at APU | In the prototype | What it tells us |
+|---|---|---|---|
+| **Semester intake** | Registry / admissions | 10,000 students | How many students could ride |
+| **Class timetable** (start, end, class size, block) | Timetabling office | 296 classes a week + 60 exam sessions | *When* waves of students leave and arrive |
+| **Shuttle timetable** | APSpace | 4 shuttles, a bus every 30 min, Mon–Fri / Sat / Sun | How many seats each departure offers (supply) |
+| **Bus capacity** | Transport operator | 40 seats per bus | |
+| **Ridership and queues** (students waiting, boarded, missed) | Stop counts now; bus GPS and passenger counters later | **10,752 records**: every stop × every half-hour departure for 8 weeks (simulated) | Demand vs supply, and who gets left behind |
+| **Weather** | MetMalaysia | Rainy on 30% of days | Extra riders on rainy days |
+| **Academic calendar** | Academic office | Week 8 = exam week | Exam-week waves |
+| **Student evidence** | [@apucutlineking](https://www.instagram.com/apucutlineking/) posts, our own rides | Used in research | Where and when line cutting happens |
+
+> Because we can't access APU's real records, the ridership data is **simulated** from the intake and timetable using rules
+> we can defend (for example: classes end at :50 and about a quarter of students leaving class take the shuttle). Every
+> assumption sits in one settings file ([`config.py`](config.py)), so real numbers can replace them without changing any code.
+
+### From data to decision
+
+| Step | What BusWatch does with the data | Where you see it |
+|---|---|---|
+| **Visualise** | Heatmap of crowding for every stop and departure | Crowd Overview |
+| **Find trends** | Peaks after classes end, rainy days, exam week, weekday patterns | Ask BusWatch, Crowd Overview |
+| **Forecast resources** | A machine-learning model (gradient boosting) predicts students waiting per stop per departure, typically within **±4 students**, and beats a "same as past weeks" guess | Demand Forecast |
+| **Decide** | A simulator tests schedule changes on the same demand; fixes are ranked by impact and cost | Schedule Simulator, Smart Recommendations (PDF report) |
+
+### What the data revealed (simulated weekdays)
+
+- **The problem is concentrated:** ≈ 530 students a day miss a full bus, and **55% of them miss it on just 7 of the 24 daily
+  departures** (lunch 12:00–13:00 and evening 17:00–18:30).
+- **APU is the bottleneck:** about **two-thirds** of missed buses happen at the APU stop, after classes end at :50.
+- **The buses aren't the issue, their timing is:** the earliest departures (07:00–08:30) carry only about **a third** of their
+  seats while the peaks overflow. The same fleet, moved to the right times, helps.
+- **Rain multiplies the problem:** about **33% more riders** on rainy days, and **2.7×** as many students miss a full bus.
+- **The timetable predicts the crowd:** students finishing class and classes about to start are the forecast's strongest
+  signals, which is why the class timetable is the most valuable data APU can share.
+
+## 4. Our solution: BusWatch
+
+**BusWatch is built to help APU's operations team run the shuttles better**: put buses where the students
 are, so fewer students are left behind and the line stops getting cut. Students benefit directly too, because they can
 see which buses are usually full and plan around them.
 
@@ -82,12 +131,26 @@ It does five things:
 | Timetable | Students | APSpace-style timetable with a dot on every departure showing whether that bus usually has seats |
 | Live Bus Tracker | Students | Map of APU and Bukit Jalil with (simulated) bus positions, the next bus from each stop, and a countdown |
 
-## 4. Impact
+### Screenshots
 
-**For students:** fewer missed buses and missed LRT connections, shorter waits, and less reason to push.
-**For APU:** fewer incidents for pages like @apucutlineking to post, better use of the buses it already pays for, and
+**Crowd Overview:** where and when students miss a full bus (red = more students than seats).
+
+![Crowd Overview](docs/crowd-overview.png)
+
+**Smart Recommendations:** the worst peak windows and the fixes that help, with their cost.
+
+![Smart Recommendations](docs/smart-recommendations.png)
+
+**Live Bus Tracker:** where each shuttle is and when the next one leaves.
+
+![Live Bus Tracker](docs/live-bus-tracker.png)
+
+## 5. Impact
+
+- **For students:** fewer missed buses and missed LRT connections, shorter waits, and less reason to push.
+- **For APU:** fewer incidents for pages like [@apucutlineking](https://www.instagram.com/apucutlineking/) to post, better use of the buses it already pays for, and
 evidence-based decisions instead of complaints.
-**Beyond APU:** any campus or company shuttle with a known timetable (classes, shifts) can use the same approach.
+- **Beyond APU:** any campus or company shuttle with a known timetable (classes, shifts) can use the same approach.
 
 ### How we measure success
 
@@ -96,7 +159,7 @@ evidence-based decisions instead of complaints.
 | Students who miss a full bus / day | ≈ 530 | −30% | −50% | −60% |
 | Average wait | ≈ 20 min | −15% | −25% | −30% |
 | Seats used (fewer empty buses) | ≈ 46% | 50% | 55% | 60% |
-| Line-cutting posts per month on @apucutlineking | ≈ 20  | −30% | −50% | −70% |
+| Line-cutting posts per month on [@apucutlineking](https://www.instagram.com/apucutlineking/) | ≈ 20  | −30% | −50% | −70% |
 | Extra running cost | – | ≤ RM 300 / day | cost-neutral (move buses, don't add) | cost-neutral |
 
 The targets come from the simulator: the top recommendations cut missed buses by about 15–45% on the windows they target,
@@ -111,7 +174,7 @@ and more when several are combined. These are targets to verify, not results.
 - **Month 6–12 (automate):** real bus GPS and passenger counters instead of simulation; forecast each new semester's
   timetable *before* it starts, so buses are planned around it.
 
-## 5. How we built it
+## 6. How we built it
 
 - **Time spent:** 5 days in total: 2 days of research, 2 days of building, 1 day of testing and preparing the pitch.
   Research came first and got as much time as building: we didn't write any code until we could explain *why* the line
@@ -123,7 +186,7 @@ and more when several are combined. These are targets to verify, not results.
 - **No AI inside the product, on purpose.** Recommendations are rules plus simulation, so every number can be checked and
   explained to management.
 
-## 6. How we used Claude, and the outcome
+## 7. How we used Claude, and the outcome
 
 We used **Claude (Claude Code)** as an AI pair programmer:
 
@@ -144,13 +207,13 @@ We also had Claude write automatic checks that prove the prototype works:
   miss a full bus.
 - **Every page works:** each page is opened on a laptop-sized and a phone-sized screen and checked for errors.
 
-## 7. The team
+## 8. The team
 
 | Name | Role |
 |---|---|
 | Soo Jing Yuan | Problem research |
 | Woo May Eng | Data and model |
-| Lee Chun Kit | Web dashboard; pitch and video |
+| Lee Chun Kit | Web dashboard, pitch and video |
 | Tan Lok Qi | QA testing |
 | Liew Shen Wei | Pitch and video |
 

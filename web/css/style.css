@@ -81,8 +81,8 @@ svg.icon { width: 20px; height: 20px; flex: none; fill: none; stroke: currentCol
 .menu a:hover { background: var(--card-2); text-decoration: none; }
 .menu a.active { background: var(--accent-soft); color: var(--accent-text); }
 .menu a.active svg { color: var(--accent-text); }
-.sidebar-note { margin-top: auto; padding: 1rem; border-radius: var(--radius); background: var(--card-2); font-size: .85rem; color: var(--muted); }
-.sidebar-note b { color: var(--heading); display: block; margin-bottom: .25rem; }
+
+
 .backdrop { display: none; position: fixed; inset: 0; background: rgba(16, 24, 40, .6); z-index: 25; }
 
 /* ---- Top header ---- */
@@ -122,6 +122,9 @@ section + section, .card + .card:not(.grid > .card) { margin-top: 1.25rem; }
 .page-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: .25rem 1.5rem; margin: 0 0 1.5rem; }
 .page-head > div { flex: 1 1 60%; min-width: 0; }
 .page-head p { color: var(--muted); max-width: 75ch; margin: 0; }
+.hint { display: inline-flex; gap: .45rem; align-items: baseline; margin-top: .6rem !important; padding: .4rem .75rem;
+  border-radius: 8px; background: var(--accent-soft); color: var(--accent-text) !important; font-size: .9rem; }
+.hint::before { content: "→"; font-weight: 700; }
 .breadcrumb { order: 2; display: flex; gap: .4rem; font-size: .875rem; color: var(--muted); white-space: nowrap; }
 .breadcrumb a { color: var(--muted); }
 .breadcrumb span:last-child { color: var(--accent-text); }
@@ -171,6 +174,8 @@ select:focus, input:focus, textarea:focus { outline: none; border-color: var(--a
 .chart.tall { height: 420px; }
 .chart.short { height: 240px; }
 .chart-missing { color: var(--muted); padding: 2rem; text-align: center; border: 1px dashed var(--border); border-radius: 10px; }
+.caption.notes { padding-left: 1.1rem; margin: .5rem 0 0; }
+.caption.notes li { margin: .15rem 0; }
 .caption { color: var(--muted); font-size: .875rem; margin-top: .5rem; }
 .legend-row { display: flex; flex-wrap: wrap; gap: 1rem; font-size: .85rem; color: var(--muted); margin-top: .75rem; }
 .dot { display: inline-block; width: .65rem; height: .65rem; border-radius: 50%; margin-right: .4rem; vertical-align: 0; }

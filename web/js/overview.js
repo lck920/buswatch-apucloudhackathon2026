@@ -1,7 +1,7 @@
 // Overview: KPI cards + stop x time heatmap of crowd level.
 import { loadData } from "./data.js";
 import { startPage, renderFilters, applyFilters, fmt } from "./ui.js";
-import { kpis, heatmap } from "./stats.js";
+import { kpis, heatmap, groupBy, sum } from "./stats.js";
 import { plot, slotAxis, COLORS } from "./charts.js";
 
 const data = await startPage("overview", loadData);
@@ -22,15 +22,27 @@ renderFilters(data, (f) => {
   ].join("");
 
   // Heatmap: always every stop (the stop filter only narrows the cards above), coloured by level
-  // (0 ok, 1 busy, 2 overflow); hover shows the real load value
-  const loads = heatmap(applyFilters(data.rows, f, { stop: false }), meta);
+  // (0 ok, 1 busy, 2 overflow). Hover says it in people: "≈ 32 students waiting for 40 seats".
+  const all = applyFilters(data.rows, f, { stop: false });
+  const loads = heatmap(all, meta);
   const level = loads.map((row) => row.map((v) => v == null ? null : v > th.overflow ? 2 : v >= th.busy ? 1 : 0));
-  const text = loads.map((row) => row.map((v) => v == null ? "no data" : v === Infinity ? "no bus" : v.toFixed(2)));
+  const days = Math.max(1, new Set(all.map((r) => r.date)).size);
+  const cell = groupBy(all, (r) => r.stop + "|" + r.slot);
+  const LABEL = ["Seats for everyone", "Nearly full", "Too many students: some miss the bus"];
+  const text = meta.stops.map((stop, si) => meta.time_slots.map((_, i) => {
+    const rs = cell.get(stop + "|" + i);
+    if (!rs) return "No data";
+    const waiting = sum(rs, (r) => r.students_waiting) / days, seats = sum(rs, (r) => r.total_capacity) / days;
+    const missed = sum(rs, (r) => r.missed_bus) / days;
+    if (!seats) return `No bus at this time<br>≈ ${fmt(waiting)} students waiting`;
+    return `<b>${LABEL[level[si][i]]}</b><br>≈ ${fmt(waiting)} students waiting for ${fmt(seats)} seats` +
+      (missed >= 0.5 ? `<br>≈ ${fmt(missed)} miss a full bus` : "");
+  }));
   plot("heatmap", [{
     type: "heatmap", z: level, x: meta.time_slots, y: meta.stops, text, zmin: 0, zmax: 2,
     colorscale: [[0, COLORS.ok], [0.333, COLORS.ok], [0.334, COLORS.busy], [0.666, COLORS.busy], [0.667, COLORS.overflow], [1, COLORS.overflow]],
     showscale: false, xgap: 2, ygap: 2,
-    hovertemplate: "%{y} - %{x}<br>Load %{text}<extra></extra>",
+    hovertemplate: "%{y}, %{x}<br>%{text}<extra></extra>",
   }], { xaxis: { ...slotAxis(meta), gridcolor: "rgba(0,0,0,0)" }, yaxis: { automargin: true, gridcolor: "rgba(0,0,0,0)" },
     margin: { l: 110, r: 10, t: 10, b: 40 } });
 });

@@ -21,14 +21,13 @@
       <p class="muted small">Every stop for the selected dates and days (the stop filter only changes the cards above). Each column is one half-hour departure.</p>
       <div id="heatmap" class="chart tall"></div>
       <div class="legend-row">
-        <span><span class="dot ok"></span>OK (load &lt; 0.8)</span>
-        <span><span class="dot busy"></span>Busy (0.8–1.0)</span>
-        <span><span class="dot overflow"></span>Overflow (&gt; 1.0)</span>
-        <span>Load = students waiting ÷ seats offered</span>
+        <span><span class="dot ok"></span>Seats for everyone</span>
+        <span><span class="dot busy"></span>Nearly full (80%+ of seats taken)</span>
+        <span><span class="dot overflow"></span>More students than seats: some miss the bus</span>
+        <span>Hover a square to see students waiting vs seats.</span>
       </div>
     </section>
   </main>
-  <footer>BusWatch prototype - All figures are <b>simulated data</b>, not real university records.</footer>
   <script type="module" src="js/overview.js"></script>
 </body>
 </html>

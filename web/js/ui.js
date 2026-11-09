@@ -72,8 +72,7 @@ export function renderTopBar(pageId) {
   sidebar.innerHTML = `
     <a class="logo" href="index.html"><span class="logo-mark">${icon("bus")}</span><span>Bus<b>Watch</b></span></a>
     <p class="menu-label">Menu</p>
-    <nav class="menu" aria-label="Pages">${nav}</nav>
-    <div class="sidebar-note"><b>Simulated data</b>All data are simulated, not real university records.</div>`;
+    <nav class="menu" aria-label="Pages">${nav}</nav>`;
   const backdrop = el("div", { class: "backdrop", onclick: () => document.body.classList.remove("menu-open") });
   document.body.prepend(sidebar, backdrop);
 

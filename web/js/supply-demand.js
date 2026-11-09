@@ -57,13 +57,10 @@ function draw() {
     { x, y: rows.map((r) => r.students_waiting), name: "Actually waiting", type: "bar", marker: { color: "rgba(152,162,179,0.35)" } },
     { x, y: pred, name: "Forecast", mode: "lines+markers", line: { color: COLORS.accent, width: 3, shape: "spline" }, marker: { size: 5 } },
     { x, y: cap, name: "Seats on the bus", type: "scatter", mode: "lines", line: { shape: "hv", color: COLORS.busy, width: 2, dash: "dash" } },
-  ], { shapes, xaxis: slotAxis(meta), yaxis: { title: { text: "Students waiting" } }, hovermode: "x unified", bargap: 0.25,
+    // legend entry for the shaded zones (the zones themselves are layout shapes)
+    { x: [null], y: [null], name: "Red zone: more students than seats", type: "bar", marker: { color: "rgba(240,68,56,0.35)" }, hoverinfo: "skip" },
+  ], { shapes, xaxis: slotAxis(meta), yaxis: { title: { text: "Students waiting" } }, hovermode: "x unified", bargap: 0.25, barmode: "overlay",
     legend: { orientation: "h", y: 1.12, x: 0 }, margin: { l: 52, r: 16, t: 36, b: 40 } });
-
-  const n = overflow.filter(Boolean).length;
-  document.getElementById("sd-caption").textContent = "Grey bars: students actually waiting. Blue line: the forecast. Orange dashes: seats on the bus. " + (n
-    ? `${n} red zone${n === 1 ? "" : "s"}: more students expected than seats. That's when students push and cut the queue.`
-    : "No red zones: the buses have enough seats for everyone expected.");
 }
 
 // Plain-language names for the model's inputs (several technical inputs share one name)
@@ -78,24 +75,6 @@ const FEATURE_LABELS = {
 function renderModel() {
   const m = data.metrics;
   if (!m) return;
-  const err = m.chosen.mae, guess = m.baseline.mae;
-  const example = 40;
-  document.getElementById("model-card").innerHTML = `
-    <h2>How accurate is the forecast?</h2>
-    <p class="muted small">We hid ${m.test_weeks.length} weeks from the model, asked it to forecast them, then compared with what really happened.</p>
-    <div class="grid kpis">
-      <div class="kpi"><div class="label">Typical error</div><div class="value">±${fmt(err, 1)}<small> students</small></div>
-        <div class="sub">per stop, per departure</div></div>
-      <div class="kpi"><div class="label">Better than a simple guess</div><div class="value">${pct(1 - err / guess)}</div>
-        <div class="sub">guess = average of past weeks (±${fmt(guess, 1)})</div></div>
-      <div class="kpi"><div class="label">Weeks it won</div><div class="value">${m.weeks_beating_baseline}<small> of ${m.test_weeks.length}</small></div>
-        <div class="sub">weeks ${m.test_weeks.join(", ")}, never seen in training</div></div>
-    </div>
-    <p class="notice small" style="margin-top:1rem">Example: if the forecast says <b>${example}</b> students will be waiting,
-      expect roughly <b>${fmt(example - err)}–${fmt(example + err)}</b>.</p>
-    <p class="small muted">Why is the simple guess close? The timetable repeats every week, so last week's average is already decent.
-      The forecast's real advantage is that it can predict a <b>new timetable</b> or unusual weather, which an average can't.</p>`;
-
   // Group the inputs under plain names, drop the ones the model barely uses, biggest first
   const grouped = {};
   for (const f of m.feature_importance) {

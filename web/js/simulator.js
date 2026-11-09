@@ -30,7 +30,7 @@ const opts = (values, sel, label = (v) => v) =>
 function renderControls() {
   const r = meta.routes[state.route];
   const overrides = r.frequency_overrides.length
-    ? r.frequency_overrides.map((o) => `${o.start}–${o.end} every ${o.frequency} min (${o.reason})`).join("; ")
+    ? r.frequency_overrides.map((o) => `${o.reason}: every ${o.frequency} min, ${o.start}–${o.end}`).join("<br>")
     : "none on this shuttle";
   host.innerHTML = `
     <div class="control-group">
@@ -45,7 +45,9 @@ function renderControls() {
       <label>Mon–Fri bus every (minutes) <input type="number" min="15" max="60" step="15" data-k="baseFrequency" value="${state.baseFrequency}"></label>
       <label class="inline"><input type="checkbox" data-k="keepOverrides" ${state.keepOverrides ? "checked" : ""} ${r.frequency_overrides.length ? "" : "disabled"}>
         Keep reduced-service windows</label>
-      <span class="small muted">${overrides}. Weekends: Sat every ${r.weekend_frequency.Sat ?? "–"} min, Sun ${r.weekend_frequency.Sun ? `every ${r.weekend_frequency.Sun} min` : "no service"}.</span>
+      <span class="small muted">Reduced service: ${overrides}<br>
+        Saturday: every ${r.weekend_frequency.Sat ?? "–"} min<br>
+        Sunday: ${r.weekend_frequency.Sun ? `every ${r.weekend_frequency.Sun} min` : "no service"}</span>
     </div>
     <div class="control-group">
       <h3>Add extra buses</h3>
@@ -117,9 +119,12 @@ function run() {
         ${line("Buses needed at peak", before.peakBuses, after.peakBuses, (v) => fmt(v))}
       </tbody>
     </table>
-    <p class="caption">Each student who watches a full bus leave is counted once. Utilisation = seats used ÷ seats offered.
-      Buses leave every 30 min; extra buses double up on the :00 / :30 departures.
-      Cost: each trip ties up a bus for ${meta.routes[state.route].round_trip_minutes} min at RM ${meta.cost_per_bus_hour} per bus-hour (simulated assumptions).</p>`;
+    <ul class="caption notes">
+      <li><b>Miss a full bus:</b> each student who watches a full bus leave is counted once.</li>
+      <li><b>Bus utilisation:</b> seats used ÷ seats offered.</li>
+      <li><b>Extra buses</b> double up on the :00 / :30 departures (buses leave every 30 min).</li>
+      <li><b>Cost:</b> each trip ties up a bus for ${meta.routes[state.route].round_trip_minutes} min at RM ${meta.cost_per_bus_hour} per bus-hour (simulated).</li>
+    </ul>`;
 
   plot("sim-chart", [
     { x: meta.time_slots, y: before.missedBySlot, name: "Before", type: "scatter", mode: "lines", fill: "tozeroy",

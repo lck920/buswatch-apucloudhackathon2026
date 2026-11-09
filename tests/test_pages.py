@@ -84,8 +84,6 @@ def main():
                 overflow = page.evaluate("document.documentElement.scrollWidth - window.innerWidth")
                 if overflow > 1:
                     errors.append(f"horizontal scroll of {overflow}px")
-                if "All data are simulated" not in page.inner_text("#sidebar"):
-                    errors.append("missing simulated-data note")
                 page.screenshot(path=str(SHOTS / f"{name}-{size}.png"), full_page=True)
                 status = "OK " if not errors else "FAIL"
                 print(f"{status} {size:7s} {name:16s} [{badge}]" + "".join(f"\n      {e}" for e in errors))
