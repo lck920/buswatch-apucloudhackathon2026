@@ -6,7 +6,7 @@
 
 **Theme: Data-Driven Research & Intelligent Decision Making.** BusWatch turns the data APU already owns (semester intake,
 class timetable, shuttle timetable) into a forecast of how many students will wait at each stop, and into ranked, costed
-decisions on where to put the buses. See [3. The data behind BusWatch](#3-the-data-behind-buswatch).
+decisions on where to put the buses.
 
 ![BusWatch Smart Recommendations](docs/smart-recommendations.png)
 
